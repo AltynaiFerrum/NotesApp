@@ -7,6 +7,7 @@
     android:orientation="horizontal"
     tools:context=".SimpleNoteDetailsActivity">
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -34,7 +35,7 @@
 
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textview_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
@@ -42,27 +43,27 @@
         android:fontFamily="@font/poppins_medium"
         android:text="@string/Software_Engineer"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/notes_item" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/description_text_view"
         android:layout_width="374dp"
         android:layout_height="95dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins"
         android:maxLines="6"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title"
         tools:text="@tools:sample/lorem/random" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/last_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -74,8 +75,9 @@
         android:singleLine="true"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="Last edited text 29.07.1999 18:06" />
 
     <Button

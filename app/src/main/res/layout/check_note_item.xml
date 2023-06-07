@@ -31,12 +31,14 @@
             android:layout_marginTop="16dp">
 
             <CheckBox
+                android:id="@+id/first_check_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleX="0.60"
                 android:scaleY="0.60" />
 
             <TextView
+                android:id="@+id/first_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -53,12 +55,14 @@
             android:layout_marginTop="16dp">
 
             <CheckBox
+                android:id="@+id/second_check_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleX="0.60"
                 android:scaleY="0.60" />
 
             <TextView
+                android:id="@+id/second_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -75,12 +79,14 @@
             android:layout_marginTop="16dp">
 
             <CheckBox
+                android:id="@+id/third_check_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleX="0.60"
                 android:scaleY="0.60" />
 
             <TextView
+                android:id="@+id/third_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -97,12 +103,14 @@
             android:layout_marginTop="16dp">
 
             <CheckBox
+                android:id="@+id/fourth_check_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleX="0.60"
                 android:scaleY="0.60" />
 
             <TextView
+                android:id="@+id/fourth_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -119,12 +127,14 @@
             android:layout_marginTop="16dp">
 
             <CheckBox
+                android:id="@+id/fifth_check_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleX="0.60"
                 android:scaleY="0.60" />
 
             <TextView
+                android:id="@+id/fifth_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -141,12 +151,14 @@
             android:layout_marginTop="16dp">
 
             <CheckBox
+                android:id="@+id/sixth_check_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleX="0.60"
                 android:scaleY="0.60" />
 
             <TextView
+                android:id="@+id/sixth_check_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
