@@ -17,46 +17,23 @@ class CheckNoteDetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
         val note = intent.extras?.getSerializable(NOTE_KEY) as? Note
         initViews(note)
-        val check = mutableListOf<String>()
-        if (check.isNotEmpty()) {
-            val d = check[0]
-        }
-
-        if (check.isNotEmpty() && check.size > 0) {
-            val d = check[1]
-        }
-        if (check.isNotEmpty() && check.size > 1) {
-            val d = check[2]
-        }
-        if (check.isNotEmpty() && check.size > 2) {
-            val d = check[3]
-        }
-        if (check.isNotEmpty() && check.size > 3) {
-            val d = check[4]
-        }
-        if (check.isNotEmpty() && check.size > 4) {
-            val d = check[5]
-        }
-
-
     }
     private fun initViews(note: Note?) {
         if (note == null) return
         binding.titleTextView.text = note.title
         binding.lastEditedTextView.text = "Last edited:" + note.lastEditedDate.toString()
-        binding.firstCheckBox.isChecked = true
+        binding.firstCheckBox.isChecked = note.checkBoxIsCheckedList[0]
         binding.firstCheckBoxTitle.text = note.checkBoxTitlesList[0]
-        binding.secondCheckBox.isChecked = true
+        binding.secondCheckBox.isChecked = note.checkBoxIsCheckedList[1]
         binding.secondCheckBoxTitle.text = note.checkBoxTitlesList[1]
-        binding.thirdCheckBox.isChecked = false
+        binding.thirdCheckBox.isChecked = note.checkBoxIsCheckedList[2]
         binding.thirdCheckBoxTitle.text = note.checkBoxTitlesList[2]
-        binding.fourthCheckBox.isChecked = false
+        binding.fourthCheckBox.isChecked = note.checkBoxIsCheckedList[3]
         binding.fourthCheckBox.text = note.checkBoxTitlesList[3]
-        binding.fifthCheckBox.isChecked = false
+        binding.fifthCheckBox.isChecked = note.checkBoxIsCheckedList[4]
         binding.fifthCheckBoxTitle.text = note.checkBoxTitlesList[4]
-        binding.sixthCheckBox.isChecked = false
+        binding.sixthCheckBox.isChecked = note.checkBoxIsCheckedList[5]
         binding.sixthCheckBoxTitle.text = note.checkBoxTitlesList[5]
-
     }
 }
 
