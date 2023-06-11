@@ -16,14 +16,37 @@ class CheckNoteDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val database = Database(this)
-        binding.firstCheckBox.setOnClickListener{
-
-        }
         val note = intent.extras?.getSerializable(NOTE_KEY) as? Note
         initViews(note)
-    }
 
+        val database = Database(this)
+        binding.saveChangesCheckButton.setOnClickListener{
+        database.updateCheckNote(
+            oldNote = note!!,
+            title = binding.titleTextView.text.toString(),
+            titles = listOf(
+                binding.firstCheckBoxTitle.text.toString(),
+                binding.secondCheckBoxTitle.text.toString(),
+                binding.thirdCheckBoxTitle.text.toString(),
+                binding.fourthCheckBoxTitle.text.toString(),
+                binding.fifthCheckBoxTitle.text.toString(),
+                binding.sixthCheckBoxTitle.text.toString()
+            ),
+            isCheckedList = listOf(
+                binding.firstCheckBox.isChecked,
+                binding.secondCheckBox.isChecked,
+                binding.thirdCheckBox.isChecked,
+                binding.fourthCheckBox.isChecked,
+                binding.fifthCheckBox.isChecked,
+                binding.sixthCheckBox.isChecked
+            )
+        )
+        }
+
+
+            // val note = intent.extras?.getSerializable(NOTE_KEY) as? Note
+        //initViews(note)
+    }
 
     private fun initViews(note: Note?) {
         if (note == null) return
