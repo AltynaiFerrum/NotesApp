@@ -14,15 +14,16 @@
         android:layout_marginStart="15dp"
         android:orientation="vertical">
 
-        <TextView
+        <EditText
             android:id="@+id/title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
+            android:backgroundTint="@android:color/transparent"
             android:fontFamily="@font/poppins_medium"
             android:singleLine="true"
-            android:textSize="12sp"
+            android:textSize="16sp"
             tools:text="Today's Workflow" />
 
         <LinearLayout

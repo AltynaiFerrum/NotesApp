@@ -34,26 +34,30 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
-    <TextView
+    <EditText
         android:id="@+id/textview_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
+        android:backgroundTint="@android:color/transparent"
         android:layout_marginBottom="70dp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/Software_Engineer"
+        android:hint="Input title"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/notes_item" />
 
-    <TextView
+    <EditText
         android:id="@+id/description_text_view"
         android:layout_width="374dp"
         android:layout_height="95dp"
         android:layout_marginTop="40dp"
+        android:hint="Input description"
         android:fontFamily="@font/poppins"
+        android:backgroundTint="@android:color/transparent"
         android:maxLines="6"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,20 +72,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginStart="297dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="212dp"
+        android:layout_marginBottom="208dp"
         android:fontFamily="@font/poppins"
         android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/saveChangesButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:text="Last edited text 29.07.1999 18:06" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/saveChangesButton"
         android:layout_width="395dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/border_color"

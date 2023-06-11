@@ -1,5 +1,6 @@
 package com.jyldyzferr.notesapp.models
 
+import android.widget.EditText
 import java.io.Serializable
 import java.util.Date
 

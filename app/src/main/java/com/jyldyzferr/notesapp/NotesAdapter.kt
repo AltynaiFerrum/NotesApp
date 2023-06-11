@@ -2,10 +2,12 @@ package com.jyldyzferr.notesapp
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.recyclerview.widget.RecyclerView
 import com.jyldyzferr.notesapp.databinding.CheckNoteItemBinding
 import com.jyldyzferr.notesapp.databinding.SimleNoteItemBinding
 import com.jyldyzferr.notesapp.models.Note
+import java.text.SimpleDateFormat
 
 class NotesAdapter(
     private val navigateToSimpleDetailsScreen: (note: Note) -> Unit,
@@ -26,9 +28,10 @@ class NotesAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(note: Note) {
-            binding.title.text = note.title
+
             binding.descriptionTextView.text = note.description
             binding.lastEditedTextView.text = "Last edited:" + note.lastEditedDate.toString()
+            binding.title.text = note.title
             binding.root.setOnClickListener{
                 navigateToSimpleDetailsScreen(note)
             }
@@ -41,8 +44,15 @@ class NotesAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(note: Note) {
-            binding.titleTextView.text = note.title
+            val editText: EditText = binding.titleTextView
+            editText.setText(note.title)
             binding.lastEditedTextView.text = "Last edited:" + note.lastEditedDate.toString()
+
+            // binding.lastEditedTextView
+           // editText.setText(note.title)
+
+            // binding.titleTextView.text = note.title
+          //  binding.lastEditedTextView.text = "Last edited:" + note.lastEditedDate.toString()
             binding.root.setOnClickListener{
                 navigateToCheckBoxDetailsScreen(note)
             }
@@ -51,31 +61,46 @@ class NotesAdapter(
                     0 -> {
                         binding.firstCheckBox.isChecked = value
                         binding.firstCheckBoxTitle.text = note.checkBoxTitlesList[index]
+                       // val myEditText = binding.firstCheckBoxTitle
+                       // myEditText.setText(note.checkBoxTitlesList[index])
+
                     }
 
                     1 -> {
                         binding.secondCheckBox.isChecked = value
                         binding.secondCheckBoxTitle.text = note.checkBoxTitlesList[index]
+                        //val myEditText = binding.secondCheckBoxTitle
+                      //  myEditText.setText(note.checkBoxTitlesList[index])
+
                     }
 
                     2 -> {
                         binding.thirdCheckBox.isChecked = value
                         binding.thirdCheckBoxTitle.text = note.checkBoxTitlesList[index]
+                       // val myEditText = binding.thirdCheckBoxTitle
+                        //myEditText.setText(note.checkBoxTitlesList[index])
                     }
 
                     3 -> {
                         binding.fourthCheckBox.isChecked = value
                         binding.fourthCheckBox.text = note.checkBoxTitlesList[index]
+                       // val myEditText =  binding.fourthCheckBoxTitle
+                       // myEditText.setText(note.checkBoxTitlesList[index])
                     }
 
                     4 -> {
                         binding.fifthCheckBox.isChecked = value
                         binding.fifthCheckBoxTitle.text = note.checkBoxTitlesList[index]
+                       // val myEditText = binding.fifthCheckBoxTitle
+                       // myEditText.setText(note.checkBoxTitlesList[index])
                     }
 
                     5 -> {
                         binding.sixthCheckBox.isChecked = value
                         binding.sixthCheckBoxTitle.text = note.checkBoxTitlesList[index]
+                       // val myEditText =  binding.sixthCheckBoxTitle
+                       // myEditText.setText(note.checkBoxTitlesList[index])
+
                     }
 
                 }
